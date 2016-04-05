@@ -9,7 +9,7 @@ package Ch5Demo;
  *
  * @author gpiskunov
  */
-class TwoDshape {
+abstract class TwoDshape {
 
     private double width;
     private double height;
@@ -45,10 +45,7 @@ class TwoDshape {
         System.out.println("Width and height " + width + 
                 " and " + height);
     }
-    double area () {
-        System.out.println("area () must be overridden ");
-        return 0.0;
-    }
+    abstract double area () ;
 }
 class Triangle extends TwoDshape {
     private String style;
@@ -100,13 +97,13 @@ class Rectangle extends  TwoDshape {
 class DynShapes {
     
     public static void main(String args[]) {
-        TwoDshape shapes[] = new TwoDshape[5];
+        TwoDshape shapes[] = new TwoDshape[4];
         
         shapes[0] = new Triangle(8.0, 12.0, "right");
         shapes[1] = new Rectangle(10);
         shapes [2] = new Rectangle(10, 4);
         shapes [3] = new Triangle(7.0);
-        shapes[4] = new TwoDshape(10, 20, "generic");
+        
         
         for(int i=0; i< shapes.length; i++) {
             System.out.println("Object is " + shapes[i].getName());
