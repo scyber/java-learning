@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<suite name="Demo Generate Test Data" verbose="1">    
+   <!-- Удаление тестовой схемы -->
+     <test name="Demo Test Data Generation">
+        <parameter name="TestRunID" value=""/>
+        <parameter name="TestCaseID" value=""/>
+        <parameter name="TestRailUser" value="trapiuser.datacloud@russianpost.ru"/>
+        <parameter name="TestRailPassword" value="dc1455021533"/>
+        <parameter name="TestRailURL" value="https://testrail.tools.russianpost.ru"/>
+        
+        <classes>
+            <class name="DataGeneration">
+            <methods>
+            <!--    
+            <include name="changeTestRunStatus"/>
+            -->
+            <include name="GenTestDocument"/>  
+            </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

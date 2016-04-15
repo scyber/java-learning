@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<suite name="Demo Test Casandra " verbose="1">    
+   <!-- Удаление тестовой схемы -->
+     <test name="Demo Test Casandra">
+        <parameter name="TestRunID" value=""/>
+        <parameter name="TestCaseID" value=""/>
+        <parameter name="TestRailUser" value="trapiuser.datacloud@russianpost.ru"/>
+        <parameter name="TestRailPassword" value="dc1455021533"/>
+        <parameter name="TestRailURL" value="https://testrail.tools.russianpost.ru"/>
+        
+        <classes>
+            <class name="DemoTestRail">
+            <methods>
+            <!--    
+            <include name="changeTestRunStatus"/>
+            -->
+            <include name="GetTestCaseSubject"/>
+            <include name="ChangeTestCaseStatus"/>
+            
+            
+            </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

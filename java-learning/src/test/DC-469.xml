@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<suite name="Regression Test DC-469" verbose="1">  
+<test name="Create 57 Test-Cases Tables">
+        <parameter name="createTable" value="create table gpiskunov.oper_type_local_
+stored as avro 
+TBLPROPERTIES ( 'avro.schema.url'='/user/aponkin/Operation_v2.avsc')
+as
+select messageid,
+oper_type,
+oper_type_local,
+oper_type_name_local,
+oper_date_time,
+oper_time_zone,
+index_oper,
+index_next,
+sys_id,
+version_number,
+type_of_operand1,
+id_of_operand1,
+obj_type_loc_id1,
+obj_type_loc_name1,
+type_of_operand2,
+id_of_operand2,
+obj_type_loc_id2,
+obj_type_loc_name2,
+oper_info,
+change_rpo_info,
+change_bag_info,
+change_document_info,
+date_processed,
+sys_id_record from gpiskunov.operations
+where oper_type = '0'
+AND type_of_operand1 = '1'
+AND oper_type_local = ' "/>
+<parameter name="createLimitValue" value=" ' limit 5 "/>        
+<parameter name="ExportString" value="EXPORT TABLE gpiskunov.oper_type_local_ TO  "/> 
+<parameter name="ExportTableString" value="'/tmp/gpiskunov/oper_type_local_ ">       
+<parameter name="ArrayOfValues" value="32 23 2 4 7 8 9 10 11 12 13 14 16 17 18 19 22 23 25 27 28 30 31 32 33 38 39 40 41 42 43 44 45 46 49 51 53 55 64 86 87 88 93 94 98 100 102 104 105 106 107 108 127 112"/>
+        
+        <classes>
+            <class name="SummaryRest">
+            <methods>  
+            <include name="createTables"/>
+            <include name="exportTables"/>
+            </methods>
+            </class>
+        </classes>
+</suite>
