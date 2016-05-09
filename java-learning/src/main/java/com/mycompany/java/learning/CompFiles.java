@@ -28,7 +28,7 @@ public class CompFiles {
             }   while (i != -1 && j != -1) ;
 
             if(i != j)
-                System.out.println("Files differ.");
+                System.out.println("Files are different");
             else
                 System.out.println("Files are the same.");
         } catch(IOException exc) {
