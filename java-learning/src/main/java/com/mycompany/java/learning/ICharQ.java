@@ -10,9 +10,9 @@ package com.mycompany.java.learning;
  * @author gpiskunov
  */
 public interface ICharQ {
-    void put(char ch) ;
+    void put(char ch)throws QueueFullException ;
     
-    char get();
+    char get()throws QueueEmptyException;
     
 }
 
