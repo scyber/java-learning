@@ -9,7 +9,7 @@ public class EncodeDemoModify {
         char encCh = 0;
         
         int key = 88;
-        String codeKey = "CoDeRsTrDw fdg fgd fgdf edsfwefdsdf";
+        String codeKey = "CoDeRsTrDw";
         char codeChars[] = codeKey.toCharArray();
         
         System.out.print("Original message : ");
