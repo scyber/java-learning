@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.java.learning;
-import java.io.FileInputStream;
-/**
- *
- * @author gpiskunov
- */
-public class CompFiles {
-    public static void main(String args[])
+
+import java.io.*;
+
+class CompFiles {
+ public static void main(String args[])
  {
    int i=0, j=0;
 
@@ -35,7 +28,7 @@ public class CompFiles {
        System.out.println("Files differ.");
      else
        System.out.println("Files are the same.");
-   } catch(Exception exc) {
+   } catch(IOException exc) {
      System.out.println("I/O Error: " + exc);
    }
  }
