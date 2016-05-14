@@ -3,6 +3,7 @@ package com.mycompany.java.learning;
 /**
  * Created by greg on 16.04.2016.
  */
+
 class NonlntResultException extends Exception {
     int n;
     int d;
@@ -26,7 +27,7 @@ class CustomExceptDemo {
         int denom[] = { 2, 0, 4, 4, 0, 8 };
         for(int i=0; i<numer.length; i++)   {
             try {
-                if((numer[i]%2) != 0)throw new NonIntResultException (numer[i], denom[i]);
+                if((numer[i]%2) != 0)throw new NonlntResultException (numer[i], denom[i]);
                 System.out.println(numer[i] + " / " +
                                 denom[i] + " is " +
                         numer[i]/denom[i]);
@@ -39,7 +40,7 @@ class CustomExceptDemo {
                 // перехватить исключение
                 System.out.println("No matching element found.");
             }
-            catch (NonIntResultException exc) {
+            catch (NonlntResultException exc) {
                 System.out.println(exc) ;
             }
         }
