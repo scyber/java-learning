@@ -13,9 +13,9 @@ package com.mycompany.java.learning;
  Пример для опробования 11.1.
  Расширение класса Thread.
  */
- class MyThread extends Thread {
+ class MyThreadExtend extends Thread {
      // построить новый поток
-     MyThread(String name) {
+     MyThreadExtend(String name) {
          super(name); // присвоить потоку  имя
          start (); // начать поток
      }
@@ -39,7 +39,7 @@ package com.mycompany.java.learning;
 public class ExtendThread {
     public static void main(String args[])  {
          System.out.println("Main thread starting.");
-         MyThread mt = new MyThread("Child #1");
+        MyThreadExtend mt = new MyThreadExtend("Child #1");
          for(int i=0; i < 50; i++) {
              System.out.print(".");
              try {
