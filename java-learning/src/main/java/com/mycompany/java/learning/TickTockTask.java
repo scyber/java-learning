@@ -65,9 +65,22 @@ class MyThreadTask implements Runnable {
     public void run() {
         if(thrd.getName().compareTo("Tick") == 0) {
             for(int i=0; i<5; i++) {
+                    try {
 
-                    ttOb.tick(true);
-                    ttOb.tick(false);
+                        ttOb.tick(true);
+                        thrd.sleep(100);
+                    } catch (Exception ex ) {
+                        ex.printStackTrace();
+                    }
+
+                    try {
+                        thrd.sleep(100);
+                        ttOb.tick(false);
+
+                    } catch (Exception ex ) {
+                        ex.printStackTrace();
+                    }
+
             }
         }
         else {
